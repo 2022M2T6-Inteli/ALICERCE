@@ -20,7 +20,7 @@ const port = 3000;
 
 
  // READ empreiteiras + certificados (JOIN)
- app.get('/empreiteiras_certificados', (req, res) => { 
+ app.get('/empreiteirasCertificados', (req, res) => { 
     res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
     let sql
@@ -142,7 +142,7 @@ app.delete('/admin', urlencodedParser, (req, res) => {
 app.post('/certificados', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
-    let sql = `INSERT INTO certificados (nome_certificado) VALUES ('${req.body.nome}')`;
+    let sql = `INSERT INTO certificados (nome_certificado) VALUES ('${req.body.nome_certificado}')`;
 
     // open the database
     let db = new sqlite3.Database(DBPATH);
@@ -159,7 +159,7 @@ app.post('/certificados', urlencodedParser, (req, res) => {
 app.put('/certificados', urlencodedParser, (req, res) => {
     res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
-    let sql = `UPDATE certificados SET nome_certificado = '${req.body.nome}' WHERE id_certificado = ${req.body.id}`;
+    let sql = `UPDATE certificados SET nome_certificado = '${req.body.nome_certificado}' WHERE id_certificado = ${req.body.id}`;
     // open the database
     let db = new sqlite3.Database(DBPATH);
     db.all(sql, [],  (err, rows ) => {
