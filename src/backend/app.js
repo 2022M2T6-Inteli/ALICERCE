@@ -18,16 +18,15 @@ const hostname = '127.0.0.1';
 const port = 3000;
 
 
-
  // READ empreiteiras + certificados (JOIN)
  app.get('/empreiteirasCertificados', (req, res) => { 
     res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
     let sql
-    if (Object.keys(req.body).length == 0) { 
+    if (Object.keys(req.query).length == 0) { 
         sql = "SELECT * FROM empreiteiras A LEFT JOIN empreiteiras_certificados B ON A.id_empreiteira = B.id_empreiteira";
     } else {
-        sql = "SELECT * FROM empreiteiras A LEFT JOIN empreiteiras_certificados B ON A.id_empreiteira = B.id_empreiteira WHERE A.id_empreiteira = " + req.id;
+        sql = "SELECT * FROM empreiteiras A LEFT JOIN empreiteiras_certificados B ON A.id_empreiteira = B.id_empreiteira WHERE A.id_empreiteira = " + req.query.id;
     }
 
     // open the database
@@ -48,10 +47,10 @@ app.get('/admin', (req, res) => {
     res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
     let sql
-    if (Object.keys(req.body).length == 0) { 
+    if (Object.keys(req.query).length == 0) { 
         sql = "SELECT * FROM admin";
     } else {
-        sql = "SELECT * FROM admin WHERE id = " + req.id;
+        sql = "SELECT * FROM admin WHERE id = " + req.query.id;
     }
 
     // open the database
@@ -121,10 +120,10 @@ app.delete('/admin', urlencodedParser, (req, res) => {
     res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
     let sql
-    if (Object.keys(req.body).length == 0) { 
+    if (Object.keys(req.query).length == 0) { 
         sql = "SELECT * FROM certificados";
     } else {
-        sql = "SELECT * FROM certificados WHERE id_certificado = " + req.id;
+        sql = "SELECT * FROM certificados WHERE id_certificado = " + req.query.id;
     }
 
     // open the database
@@ -193,10 +192,10 @@ app.delete('/certificados', urlencodedParser, (req, res) => {
     res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
     let sql
-    if (Object.keys(req.body).length == 0) { 
+    if (Object.keys(req.query).length == 0) { 
         sql = "SELECT * FROM contratos";
     } else {
-        sql = "SELECT * FROM contratos WHERE id_contrato = " + req.id;
+        sql = "SELECT * FROM contratos WHERE id_contrato = " + req.query.id;
     }
 
     // open the database
@@ -265,10 +264,10 @@ app.delete('/contratos', urlencodedParser, (req, res) => {
     res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
     let sql
-    if (Object.keys(req.body).length == 0) { 
+    if (Object.keys(req.query).length == 0) { 
         sql = "SELECT * FROM empreiteira_historico_obras";
     } else {
-        sql = "SELECT * FROM empreiteira_historico_obras WHERE id_historico_obra = " + req.id;
+        sql = "SELECT * FROM empreiteira_historico_obras WHERE id_historico_obra = " + req.query.id;
     }
 
     // open the database
@@ -337,10 +336,10 @@ app.delete('/empreiteira_historico_obras', urlencodedParser, (req, res) => {
     res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
     let sql
-    if (Object.keys(req.body).length == 0) { 
+    if (Object.keys(req.query).length == 0) { 
         sql = "SELECT * FROM empreiteiras";
     } else {
-        sql = "SELECT * FROM empreiteiras WHERE id_empreiteira = " + req.id;
+        sql = "SELECT * FROM empreiteiras WHERE id_empreiteira = " + req.query.id;
     }
 
     // open the database
@@ -410,10 +409,10 @@ app.delete('/empreiteiras', urlencodedParser, (req, res) => {
     res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
     let sql
-    if (Object.keys(req.body).length == 0) { 
+    if (Object.keys(req.query).length == 0) { 
         sql = "SELECT * FROM empreiteiras_certificados";
     } else {
-        sql = "SELECT * FROM empreiteiras_certificados WHERE id_empreiteira_certificado = " + req.id;
+        sql = "SELECT * FROM empreiteiras_certificados WHERE id_empreiteira_certificado = " + req.query.id;
     }
 
     // open the database
@@ -482,10 +481,10 @@ app.delete('/empreiteiras_certificados', urlencodedParser, (req, res) => {
     res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
     let sql
-    if (Object.keys(req.body).length == 0) { 
+    if (Object.keys(req.query).length == 0) { 
         sql = "SELECT * FROM empreiteiras_especialidades";
     } else {
-        sql = "SELECT * FROM empreiteiras_especialidades WHERE id_empreiteiras_especialidades = " + req.id;
+        sql = "SELECT * FROM empreiteiras_especialidades WHERE id_empreiteiras_especialidades = " + req.query.id;
     }
 
     // open the database
@@ -554,10 +553,10 @@ app.delete('/empreiteiras_especialidades', urlencodedParser, (req, res) => {
     res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
     let sql
-    if (Object.keys(req.body).length == 0) { 
+    if (Object.keys(req.query).length == 0) { 
         sql = "SELECT * FROM enderecos";
     } else {
-        sql = "SELECT * FROM enderecos WHERE id_endereco = " + req.id;
+        sql = "SELECT * FROM enderecos WHERE id_endereco = " + req.query.id;
     }
 
     // open the database
@@ -626,10 +625,10 @@ app.delete('/enderecos', urlencodedParser, (req, res) => {
     res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
     let sql
-    if (Object.keys(req.body).length == 0) { 
+    if (Object.keys(req.query).length == 0) { 
         sql = "SELECT * FROM especialidades";
     } else {
-        sql = "SELECT * FROM especialidades WHERE id_especialidade = " + req.id;
+        sql = "SELECT * FROM especialidades WHERE id_especialidade = " + req.query.id;
     }
 
     // open the database
@@ -698,10 +697,10 @@ app.delete('/especialidades', urlencodedParser, (req, res) => {
     res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
     let sql
-    if (Object.keys(req.body).length == 0) { 
+    if (Object.keys(req.query).length == 0) { 
         sql = "SELECT * FROM favoritos";
     } else {
-        sql = "SELECT * FROM favoritos WHERE id_favorito = " + req.id;
+        sql = "SELECT * FROM favoritos WHERE id_favorito = " + req.query.id;
     }
 
     // open the database
@@ -770,10 +769,10 @@ app.delete('/favoritos', urlencodedParser, (req, res) => {
     res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
     let sql
-    if (Object.keys(req.body).length == 0) { 
+    if (Object.keys(req.query).length == 0) { 
         sql = "SELECT * FROM feedbacks";
     } else {
-        sql = "SELECT * FROM feedbacks WHERE id_feedback = " + req.id;
+        sql = "SELECT * FROM feedbacks WHERE id_feedback = " + req.query.id;
     }
 
     // open the database
@@ -842,10 +841,10 @@ app.delete('/feedbacks', urlencodedParser, (req, res) => {
     res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
     let sql
-    if (Object.keys(req.body).length == 0) { 
+    if (Object.keys(req.query).length == 0) { 
         sql = "SELECT * FROM funcionarios_empreiteiras";
     } else {
-        sql = "SELECT * FROM funcionarios_empreiteiras WHERE id_funcionario = " + req.id;
+        sql = "SELECT * FROM funcionarios_empreiteiras WHERE id_funcionario = " + req.query.id;
     }
 
     // open the database
@@ -914,10 +913,10 @@ app.delete('/funcionarios_empreiteiras', urlencodedParser, (req, res) => {
     res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
     let sql
-    if (Object.keys(req.body).length == 0) { 
+    if (Object.keys(req.query).length == 0) { 
         sql = "SELECT * FROM obras";
     } else {
-        sql = "SELECT * FROM obras WHERE id_obra = " + req.id;
+        sql = "SELECT * FROM obras WHERE id_obra = " + req.query.id;
     }
 
     // open the database
@@ -986,10 +985,10 @@ app.delete('/obras', urlencodedParser, (req, res) => {
     res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
     let sql
-    if (Object.keys(req.body).length == 0) { 
+    if (Object.keys(req.query).length == 0) { 
         sql = "SELECT * FROM oportunidades";
     } else {
-        sql = "SELECT * FROM oportunidades WHERE id_oportunidade = " + req.id;
+        sql = "SELECT * FROM oportunidades WHERE id_oportunidade = " + req.query.id;
     }
 
     // open the database
