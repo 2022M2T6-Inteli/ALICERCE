@@ -1,0 +1,21 @@
+body{
+    background-color: #f4f4f4;
+}
+
+
+div.principal{
+    background-color: #ffffff;
+    margin: 100px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+
+div.secundaria{
+
+    background-color: #006b3f;
+    margin: 5px;
+    
+    border-radius: 20px;
+    text-align: center;
+}
