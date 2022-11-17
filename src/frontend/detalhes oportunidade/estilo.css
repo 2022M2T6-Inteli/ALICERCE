@@ -10,6 +10,8 @@ div.principal{
 }
 
 
+
+
 p.home{
     font-style: italic;
     font-size: 16px;
@@ -34,4 +36,61 @@ button.b_cadastrar{
     color:#ffffff ;
     width: 100px;
     border-radius: 10px;
+}
+
+
+b.parecidas{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+}
+
+div.secundaria{ 
+    background-color: #ffffff;
+    text-align: center;
+    margin: 100px;
+    border-radius: 20px;
+}
+
+#parecidas{
+    text-align: center;
+}
+
+div.terciaria{
+    background-color: #ffffff;
+    text-align: center;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+button.acessar{
+    border-radius: 10px;
+    background-color: #ffb719;
+    margin: 10px;
+    color: #ffffff;
+}
+
+img.hidro{
+    border-radius: 10px;
+    width: 500px;
+}
+
+
+img.pintura{
+    border-radius: 10px;
+    width: 500px;
+}
+
+div.rodape{
+    text-align: center;
+}
+
+p.rodadpe{
+    text-align: center;
+}
+b.rodadpe{
+    text-align: center;
 }
