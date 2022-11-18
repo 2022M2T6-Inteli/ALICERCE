@@ -10,10 +10,15 @@ div.busca{
     width: 374px;
     height: 273px;
     border-radius: 10px;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
 }
 
 #estado{
     font-size: 16px;
+    text-align: center;
 }
 
 #especialdiade{
@@ -44,15 +49,24 @@ div.busca{
     width: 152px;
     height: 32px;
     position: 187px;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
 }
 
 
 div.secundaria{
     background-color: #ffffff;
-    height: 500px;
+    text-align: center;
+    margin: 100px;
+    border-radius: 20px;
+    height: 418px;
     width: 346px;
-    border-radius: 10px;
-    justify-content: center;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    border: 10px;
 }
 
 
@@ -67,10 +81,14 @@ button.acessar{
 }
 
 div.terciaria{
-    margin-top: 10px;
-    margin: 10px;
-    background-color: white;
+    background-color: #ffffff;
+    text-align: center;
+    margin: 100px;
+    border-radius: 20px;
     height: 418px;
     width: 346px;
-    border-radius: 10px;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    border: 10px;
 }
