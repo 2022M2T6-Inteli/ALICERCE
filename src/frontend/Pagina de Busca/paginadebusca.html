@@ -14,6 +14,67 @@
     <link rel="stylesheet" type="text/css" href="busca.css" />
   </head>
   <body>
-    <div class="busca"></div>
+    <p>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-house-fill"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"
+        />
+        <path
+          d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"
+        />
+      </svg>
+      home > pagina de busca
+    </p>
+    <div class="busca">
+      <b id="estado">Estado</b>
+      <b id="requisito">Requisito</b>
+
+      <p><select name="est" id="selecao_estado"></p>
+        <option value="SP">SP</option>
+        <option value="MG">MG</option>
+        <option value="RS">RS</option>
+        <option value="RJ">RJ</option>
+        <option value="PR">PR</option>
+      </select>
+
+      <p><b class="especialidade">Especialidade</b></p>
+      <select name="esp" id="selecao_especialidade">
+        <option value="Pintura">Pintura</option>
+        <option value="Hidraulica">Hidraulica</option>
+        <option value="Estrutura">Estrutura</option>
+        <option value="Ambiental">Ambiental</option>
+        <option value="Mapeamento">Mapeamento</option>
+      </select>
+      <p id="tempo_contratação">Tempo de contratação</p>
+    </div>
+    <b>230 oportunidades</b>
+    <p>Total de oportunidades: 300</p>
+    <div class="secundaria">
+        <p><b>Hidráulica</b></p>
+        <p><img class="hidro"  src="../imagens/hidraulica.jpeg" alt=""></p>
+        <b><p>Local: São Paulo</p></b>
+        <b><p>Obra: São Jorge Caetano</p></b>
+        <b><p>Data de inicio: </p></b>
+        <b><p>Resumo:</p></b>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at diam id felis dictum ultricies.</p>
+        <p><button class="acessar">Acessar</button></p>
+    </div>
+    <div class="terciaria">
+        <p><b>Pintura</b></p>
+        <p><img class="hidro"  src="../imagens/foto_pintura.jpeg" alt=""></p>
+        <b><p>Local: São Paulo</p></b>
+        <b><p>Obra: São Jorge Caetano</p></b>
+        <b><p>Data de inicio: </p></b>
+        <b><p>Resumo:</p></b>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at diam id felis dictum ultricies.</p>
+        <button class="acessar">Acessar</button>
+      </div>
   </body>
 </html>

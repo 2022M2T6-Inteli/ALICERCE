@@ -1,0 +1,76 @@
+
+body{
+    background-color: #f4f4f4;
+}
+
+div.busca{
+    margin: 10px;
+    background-color: #006b3f;
+    color: white;
+    width: 374px;
+    height: 273px;
+    border-radius: 10px;
+}
+
+#estado{
+    font-size: 16px;
+}
+
+#especialdiade{
+    margin: 16px;
+    font-size: 18px;
+}
+
+#requisito{
+    position: 200px;
+}
+
+
+#selecao_estado{
+    
+    width: 160px;
+    height: 26px;
+    border-radius: 10px;
+}
+
+
+#selecao_especialidade{
+    width: 160px;
+    height: 26px;
+    border-radius: 10px;
+}
+
+#tempo_contratação{
+    width: 152px;
+    height: 32px;
+    position: 187px;
+}
+
+
+div.secundaria{
+    background-color: #ffffff;
+    height: 500px;
+    width: 346px;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+
+button.acessar{
+    margin: 10px;
+    background-color: #ffb719 ;
+    color: #ffffff;
+    height: 28px;
+    width: 113px;
+    border-radius: 10px;
+    ;
+}
+
+div.terciaria{
+    margin-top: 10px;
+    margin: 10px;
+    background-color: white;
+    height: 418px;
+    width: 346px;
+    border-radius: 10px;
+}
