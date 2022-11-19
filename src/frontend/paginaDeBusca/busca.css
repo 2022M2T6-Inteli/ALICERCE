@@ -3,6 +3,7 @@ body{
     background-color: #f4f4f4;
 }
 
+
 div.busca{
     margin: 10px;
     background-color: #006b3f;
@@ -16,15 +17,18 @@ div.busca{
     text-align: center;
 }
 
+
 #estado{
     font-size: 16px;
     text-align: center;
 }
 
+
 #especialdiade{
     margin: 16px;
     font-size: 18px;
 }
+
 
 #requisito{
     position: 200px;
@@ -32,7 +36,6 @@ div.busca{
 
 
 #selecao_estado{
-    
     width: 160px;
     height: 26px;
     border-radius: 10px;
@@ -45,6 +48,7 @@ div.busca{
     border-radius: 10px;
 }
 
+
 #tempo_contratação{
     width: 152px;
     height: 32px;
@@ -56,12 +60,31 @@ div.busca{
 }
 
 
+#totalOportunidades{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+#filtrar{
+    color: #ffffff;
+
+    margin: 60px;
+    width: 130px;
+    height: 28px;
+    left: 129px;
+    top: 297px;
+    background-color: #ffb719;
+    text-align: center;
+    border-radius: 10px;
+}
+
 div.secundaria{
     background-color: #ffffff;
     text-align: center;
     margin: 100px;
     border-radius: 20px;
-    height: 418px;
+    height: 500px;
     width: 346px;
     margin: auto;
     width: 50%;
@@ -80,6 +103,7 @@ button.acessar{
     ;
 }
 
+
 div.terciaria{
     background-color: #ffffff;
     text-align: center;
@@ -91,4 +115,10 @@ div.terciaria{
     width: 50%;
     padding: 10px;
     border: 10px;
+}
+
+
+#pintura{
+    width: 301px;
+    height: 111px;
 }
