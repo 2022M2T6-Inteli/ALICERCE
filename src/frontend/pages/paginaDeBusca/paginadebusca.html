@@ -36,26 +36,37 @@
       home > pagina de busca
     </p>
     <div class="busca">
-      <b id="estado">Estado</b>
-      <b id="requisito">Requisito</b>
+      
+      <div class="estado">
+        <b id="estado">Estado</b>
+        <p><select name="est" id="selecao_estado"></p>
+          <option value="SP">SP</option>
+          <option value="MG">MG</option>
+          <option value="RS">RS</option>
+          <option value="RJ">RJ</option>
+          <option value="PR">PR</option>
+        </select>
+      </div>
+      <div class="cidade">
+        <b id="cidade">Cidade</b>
+      </div>
 
-      <p><select name="est" id="selecao_estado"></p>
-        <option value="SP">SP</option>
-        <option value="MG">MG</option>
-        <option value="RS">RS</option>
-        <option value="RJ">RJ</option>
-        <option value="PR">PR</option>
-      </select>
-      <b id="cidade"></b>
-      <p><b class="especialidade">Especialidade</b></p>
-      <select name="esp" id="selecao_especialidade">
-        <option value="Pintura">Pintura</option>
-        <option value="Hidraulica">Hidraulica</option>
-        <option value="Estrutura">Estrutura</option>
-        <option value="Ambiental">Ambiental</option>
-        <option value="Mapeamento">Mapeamento</option>
-      </select>
-      <p><button id="filtrar">pesquisar</button></p>
+      <div class="especialidade">
+          <b id="especialidade">Especialidade</b><br>
+          <select name="esp" id="selecao_especialidade">
+            <option value="Pintura">Pintura</option>
+            <option value="Hidraulica">Hidraulica</option>
+            <option value="Estrutura">Estrutura</option>
+            <option value="Ambiental">Ambiental</option>
+            <option value="Mapeamento">Mapeamento</option>
+          </select>
+        <p><button id="filtrar">pesquisar</button></p>
+      </div>
+
+      
+
+      
+
     </div>
     <div id="totalOportunidades"><b>230 oportunidades</b></div>
     <div class="secundaria">
