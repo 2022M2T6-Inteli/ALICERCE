@@ -4,6 +4,19 @@ body {
     background-color: #f4f4f4;
 }
 
+
+#home{
+    display:flex;
+    justify-content: center;
+}
+
+.mae{
+    display:flex;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+
 .principal {
     background-color: #ffffff;
 
