@@ -16,10 +16,11 @@ body {
     border-radius: 20px;
 }
 
-
-.principal {
-    background-color: #ffffff;
-
+#principal{
+    width: 350px ;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 
