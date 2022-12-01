@@ -65,3 +65,38 @@
     height: 68px;
     margin-bottom: 8px;
 }
+
+.depoimentosContainer {
+    background-color: green;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 24px 48px 16px 48px;
+
+}
+
+
+.tituloDepoimentos > h2{
+    margin-top: 24px;
+    color: white;
+}
+
+.depoimentosGrupo {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.depoimento {
+    margin: 24px 24px 24px 24px;
+    background-color: yellow;
+    
+}
+
+
+.imagemEmpreiteira {
+    margin: 24px 0 0 48px;
+    border-radius: 10%;
+    background-image: url("./backgroundGreen.png");
+    width: 250px;
+    height: 250px;
+}
