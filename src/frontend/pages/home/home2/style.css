@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.containerPesquisa{
+    background-color: green;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 24 0 16px 0;
+}
+
+.formAgrupamento {
+    margin-left: 20%;
+    margin-right: 20%;
+    
+}
+
+.gridAgrupamentoHome  {
+    justify-content: space-between;
+}
+.inputForm {
+    font-size: 16px;
+    font-weight: 800;
+    color: #FFFFFF;
+}
+
+.botaoPesquisar {
+    background-color: black;
+    color: white;
+    font-weight: 800;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.containerIconeOportunidades {
+    padding: 24px 0 16px 48px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.containerIconeOportunidades>h2 {
+    left: 50%;
+    font-weight: 800;
+
+}
+.tituloIconeOportunidades {
+    display: flex;
+    justify-content: center;
+}
+
+.containerIconeOportunidade {
+    background-color: yellow;
+    width: 100px;
+    height: 140px;
+    margin-left: 0;
+    margin-right: 0;
+    align-items: center;
+    justify-content: center;
+    padding-top: 16px;
+    margin-top: 32px;
+}
+.containerIconeOportunidade>img {
+    width: 68px;
+    height: 68px;
+    margin-bottom: 8px;
+}
