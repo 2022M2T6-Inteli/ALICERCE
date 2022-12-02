@@ -82,13 +82,14 @@
 
 .depoimentosGrupo {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 24px;
 }
 
 .depoimento {
     margin: 24px 24px 24px 24px;
     background-color: yellow;
+    max-width: 400px;
     
 }
 
@@ -99,4 +100,21 @@
     background-image: url("./backgroundGreen.png");
     width: 250px;
     height: 250px;
+}
+
+.tituloOportunidadesMaisProcuradas {
+    text-align: center;
+}
+.perguntasFrequentes{
+    background-color: green;
+    text-align: center;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+.perguntasFrequentes>h2{
+    color: white;
+    margin-bottom: 24px;
+}
+.panel{
+    background-color: yellow;
 }
