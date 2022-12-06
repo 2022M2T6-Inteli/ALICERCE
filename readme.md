@@ -9,11 +9,11 @@
 ## Nome do grupo: ALICERCE
 
 ## Integrantes: 
-- <a href="https://www.linkedin.com/in/victorbarq/">HENRIQUE BURLE</a>
+- <a href="https://www.linkedin.com/in/henrique-burle/">HENRIQUE BURLE</a>
 - <a href="https://www.linkedin.com/in/victorbarq/">RENAN SILVA</a>
 - <a href="https://www.linkedin.com/in/victorbarq/">VINICIUS KENJI</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">STEFANO</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">TONY JONAS</a>
+- <a href="https://www.linkedin.com/in/stefano-parente-652822244//">STEFANO</a> 
+- <a href="https://www.linkedin.com/in/tonyjonas/">TONY JONAS</a>
 
 ## 📝 Descrição
 
@@ -58,7 +58,7 @@ Isso instalará todas as dependências definidas no arquivo <b>package.json</b> 
 ```sh
 npm start
 ```
-5. Agora você pode acessar a aplicação através do link http://localhost:1234/
+5. Agora você pode acessar a aplicação através do link http://localhost:3000/
 6. O servidor está online.
 
 
