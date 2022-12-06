@@ -1,0 +1,127 @@
+<%- include("../components/cabecalho") %>
+
+<nav class="containerLocalizacao">
+
+    <img src="../../public/images/homepage-icon.svg" alt="">
+    <a href="#">Home</a>
+    <p id="separadorLocalizacao">></p>
+    <a href="#" class="paginaAtual">Página de busca</a>
+  </nav>
+
+
+  <div id="module" class="container-fluid filtroContainer backgroundGreen">
+    <div class="row collapse" id="collapseExample" aria-expanded="false">
+      <div class="col-6 filtro colunaEsquerda">
+        <label class="filtroLabel" for="filtroEspecialidade">Especialidade</label>
+        <input type="text" class="filtroInput" name="filtroEspecialidade" id="filtroEspecialidade"
+          placeholder="Exemplo: ">
+      </div>
+      <div class="col-6 filtro">
+        <label class="filtroLabel" for="filtroTempoContratacao">Tempo de contratação</label>
+        <input type="text" class="filtroInput" name="filtroTempoContratacao" id="filtroTempoContratacao"
+          placeholder="Exemplo: ">
+      </div>
+      <div class="col-6 filtro colunaEsquerda">
+        <label class="filtroLabel" for="filtroEstado">Estado</label>
+        <input type="text" class="filtroInput" name="filtroEstado" id="filtroEstado" placeholder="Exemplo: ">
+      </div>
+      <div class="col-6 filtro">
+        <label class="filtroLabel" for="filtroCidade">Cidade</label>
+        <input type="text" class="filtroInput" name="filtroCidade" id="filtroCidade" placeholder="Exemplo: ">
+      </div>
+    </div>
+    <button class="collapsed" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
+      aria-controls="collapseExample">Filtro</button>
+
+    <div class="botaoPesquisar">
+      <button type="button" class="btn btn-dark botaoPesquisar centered">PESQUISAR</button>
+    </div>
+
+  </div>
+
+  <div class="container-fluid">
+    <div class=" informacoesOportunidades">
+      <div class="quantidadeOportunidades">
+        <p>230 oportunidades</p>
+        <p>Total de oportunidades: 300</p>
+      </div>
+      <div class="ordenacaoOportunidades">
+        <a href="">Mais relevantes</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row container-fluid">
+    <div class="col-sm-12 col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">PINTURA</h5>
+          <img class="card-img-bottom" src="../../public/images/pintura-imagem.jpg" alt="Imagem de capa do card">
+          <div class="card-text">
+            <p class="card-text-label" id="cardLocal">Local: </p>
+            <p class="card-text-response">São Paulo, SP</p>
+          </div>
+          <div class="card-text">
+            <p class="card-text-label" id="cardObra">Obra: </p>
+            <p class="card-text-response">Prédio Nova Holanda</p>
+          </div>
+          <div class="card-text">
+            <p class="card-text-label" id="cardDataInicio">Data de Início: </p>
+            <p class="card-text-response">03/02/2023</p>
+          </div>
+          <div class="card-text">
+            <p class="card-text-label" id="cardDataTermino">Data de término: </p>
+            <p class="card-text-response">03/06/2023</p>
+          </div>
+          <div class="card-text">
+            <p class="card-text-label" id="cardResumo">Resumo: </p>
+            <p class="card-text-response">Será preciso pintar internamente mais de 20 quartos, utilizando os próprios
+              materiais.</p>
+          </div>
+
+          <div class="containerBotaoAcessar">
+            <button type="button" class="btn btn-warning botaoAcessar">Acessar</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">PINTURA</h5>
+          <img class="card-img-bottom" src="../../public/images/pintura-imagem.jpg" alt="Imagem de capa do card">
+          <div class="card-text">
+            <p class="card-text-label" id="cardLocal">Local: </p>
+            <p class="card-text-response">São Paulo, SP</p>
+          </div>
+          <div class="card-text">
+            <p class="card-text-label" id="cardObra">Obra: </p>
+            <p class="card-text-response">Prédio Nova Holanda</p>
+          </div>
+          <div class="card-text">
+            <p class="card-text-label" id="cardDataInicio">Data de Início: </p>
+            <p class="card-text-response">03/02/2023</p>
+          </div>
+          <div class="card-text">
+            <p class="card-text-label" id="cardDataTermino">Data de término: </p>
+            <p class="card-text-response">03/06/2023</p>
+          </div>
+          <div class="card-text">
+            <p class="card-text-label" id="cardResumo">Resumo: </p>
+            <p class="card-text-response">Será preciso pintar internamente mais de 20 quartos, utilizando os próprios
+              materiais.</p>
+          </div>
+
+          <div class="containerBotaoAcessar">
+            <button type="button" class="btn btn-warning botaoAcessar">Acessar</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<%- include("../components/rodape") %>
