@@ -4,6 +4,11 @@
     padding: 0;
 }
 
+/* alterando a cor padrao da pagina */
+.container-fluid, .container {
+  background-color: #F4F4F4;
+}
+
 /* mudando o background do header */
 .header{
     background: rgb(0,107,63);
@@ -33,7 +38,7 @@
 /* propriedades do container de pesquisa da home */
 .containerPesquisa{
     background: rgb(0,107,63);
-background: linear-gradient(90deg, rgba(0,107,63,1) 0%, rgba(7,157,86,1) 35%, rgba(0,107,63,1) 100%);
+    background: linear-gradient(90deg, rgba(0,107,63,1) 0%, rgba(7,157,86,1) 35%, rgba(0,107,63,1) 100%);
     margin-left: 0;
     margin-right: 0;
     padding: 48px 0 32px 0;
@@ -60,7 +65,7 @@ background: linear-gradient(90deg, rgba(0,107,63,1) 0%, rgba(7,157,86,1) 35%, rg
 
 /* alterando propriedades do botao de pesquisa */
 .botaoPesquisar {
-    background-color: red;
+    background-color: black;
     color: white;
     font-weight: 800;
     margin-top: 32px;
@@ -93,7 +98,7 @@ background: linear-gradient(90deg, rgba(0,107,63,1) 0%, rgba(7,157,86,1) 35%, rg
 /* propriedades do background dos icones */
 .containerIconeOportunidade {
     background: rgb(255,139,34);
-background: linear-gradient(90deg, rgba(255,139,34,1) 35%, rgba(255,183,25,1) 100%);
+    background: linear-gradient(90deg, rgba(255,139,34,1) 35%, rgba(255,183,25,1) 100%);
     width: 100px;
     height: 140px;
     margin-left: 0;
@@ -111,7 +116,8 @@ background: linear-gradient(90deg, rgba(255,139,34,1) 35%, rgba(255,183,25,1) 10
 
 /* criando a div de depoimentos */
 .depoimentosContainer {
-    background-color: green;
+    background: rgb(0,107,63);
+    background: linear-gradient(90deg, rgba(0,107,63,1) 0%, rgba(7,157,86,1) 35%, rgba(0,107,63,1) 100%);
     margin-bottom: 24px;
     padding: 24px 48px 16px 48px;
     margin: 0 0 24px 0;
@@ -133,7 +139,8 @@ background: linear-gradient(90deg, rgba(255,139,34,1) 35%, rgba(255,183,25,1) 10
 /* mudando a fonte de depoimento */
 .depoimento {
     margin: 24px 24px 24px 24px;
-    background-color: red;
+    background: rgb(255,139,34);
+    background: linear-gradient(90deg, rgba(255,139,34,1) 35%, rgba(255,183,25,1) 100%);
     max-width: 400px;
 }
 /* propriedades da imagem da empreiteira */
@@ -145,13 +152,19 @@ background: linear-gradient(90deg, rgba(255,139,34,1) 35%, rgba(255,183,25,1) 10
     height: 250px;
 }
 
+.oportunidadesMaisProcuradas {
+  background-color: white;
+}
+
 .tituloOportunidadesMaisProcuradas {
     text-align: center;
+    
 }
 
 /* criando a div de perguntas frequentes */
-.perguntasFrequentes{
-    background-color: green;
+  .perguntasFrequentes{
+    background: rgb(0,107,63);
+    background: linear-gradient(90deg, rgba(0,107,63,1) 0%, rgba(7,157,86,1) 35%, rgba(0,107,63,1) 100%);
     text-align: center;
     padding-top: 48px;
     padding-bottom: 48px;
@@ -163,7 +176,8 @@ background: linear-gradient(90deg, rgba(255,139,34,1) 35%, rgba(255,183,25,1) 10
     margin-bottom: 24px;
 }
 .panel{
-    background-color: yellow;
+  background: rgb(255,139,34);
+  background: linear-gradient(90deg, rgba(255,139,34,1) 35%, rgba(255,183,25,1) 100%);
 }
 
 /* criando container de pesquisa por localização */
@@ -273,9 +287,7 @@ background: linear-gradient(90deg, rgba(255,139,34,1) 35%, rgba(255,183,25,1) 10
   margin-bottom: 24px;
 }
 
-.container-fluid, .container {
-    background-color: #F4F4F4;
-}
+
 
 /* centralizando o card */
 .card-text {

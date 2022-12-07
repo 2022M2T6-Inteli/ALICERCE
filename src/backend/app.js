@@ -16,18 +16,18 @@ const app = express();
 
 
 // Configura o diretório de onde tirar as views.
-app.set("views", path.join(__dirname, "../views"));
+app.set("views", path.join(__dirname, "../frontend/views"));
 // Define o view engine como o ejs.
 app.set("view engine", "ejs");
 
 // Configura o middleware de arquivos estáticos para responder às rotas iniciadas por "/public", servindo o conteúdo da pasta "../public".
-app.use("/public", express.static(path.join(__dirname, "../public"), {
+app.use("/public", express.static(path.join(__dirname, "../frontend/public"), {
 	cacheControl: false,
 	etag: false,
 	maxAge: "30d"
 }));
 
-app.use("/views", express.static(path.join(__dirname, "../views")));
+app.use("/views", express.static(path.join(__dirname, "../frontend/views")));
 
 // Configura o middleware que lê cookies. Ele está aqui, abaixo do middleware de arquivos estáticos, porque não precisamos de cookies para servir arquivos estáticos.
 const cookieParser = require("cookie-parser");
@@ -47,10 +47,8 @@ app.use((req, res, next) => {
 
 // Especifica quais módulos serão responsáveis por servir cada rota, a partir dos endereços requisitados pelo cliente.
 app.use("/", require("./routes/index"));
-app.use("/funcionarios", require("./routes/funcionarios"));
-app.use("/projetos", require("./routes/projetos"));
+app.use("/ajuda", require("./routes/ajuda"));  
 app.use("/detalhesOportunidades", require("./routes/detalhesOportunidades"));
-app.use("/ajuda", require("./routes/ajuda"));
 app.use("/login", require("./routes/login"));
 app.use("/cadastro", require("./routes/cadastro"));
 app.use("/perfil", require("./routes/perfil"));

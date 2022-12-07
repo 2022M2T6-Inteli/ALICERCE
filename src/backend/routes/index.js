@@ -5,7 +5,7 @@ const router = express.Router();
 
 // rota principal da aplicação
 router.all("/", (req, res) => {
-	res.render("index/index");
+	res.render("../views/index/index");
 });
 
 // rota para mostrar grafico
