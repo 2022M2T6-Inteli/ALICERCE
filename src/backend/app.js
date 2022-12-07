@@ -74,3 +74,7 @@ app.use((err, req, res, next) => {
 const server = app.listen(parseInt(process.env.PORT), process.env.IP, () => {
 	console.log("Servidor executando na porta " + server.address().port);
 });
+
+
+
+

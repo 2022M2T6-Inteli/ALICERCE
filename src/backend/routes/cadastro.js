@@ -2,7 +2,11 @@ const express = require("express");
 const db = require('../utils/db');
 
 const router = express.Router();
+const app = express
 
+app.request(express.json())
+
+app.use(express.urlencoded())
 // rota principal de cadastro
 router.all("/", (req, res) => {
 	res.render("funcionarios/index");
@@ -117,3 +121,37 @@ router.all("/inserir", (req, res) => {
 
 // exportnado objeto router
 module.exports = router;
+
+
+app.get('/cadastro1', (req, res)=>{
+
+	res.sendFile(__dirname + 'src/frontend/views/cadastro/index.ejs')
+
+})
+
+//adicionando dados do cadastro 1
+app.post('/cadastro1Post',(req,res)=>{
+	
+	const cnpj = req.body.cnpj
+	const email = req.body.email
+	const telefone = req.body.telefone
+
+	db.run('INSERT INTO empreiteiras (CNPJ, email , telefone) VALUES (?, ?, ?)', [cnpj, email, telefone], function(err) {
+		if (err) {
+		  return console.error(err.message);
+		}
+	  });
+})
+
+app.post('/cadastro2Post',(req,res)=>{
+	
+	const cnpj = req.body.cnpj
+	const email = req.body.email
+	const telefone = req.body.telefone
+
+	db.run('INSERT INTO empreiteiras (CNPJ, email , telefone) VALUES (?, ?, ?)', [cnpj, email, telefone], function(err) {
+		if (err) {
+		  return console.error(err.message);
+		}
+	  });
+})
