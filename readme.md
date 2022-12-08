@@ -25,25 +25,25 @@ Nesse sentido, a navegação pela plataforma será feita via web, por meio de na
 
 |--> documentos<br>
 |--> src<br>
-  |--> backend<br>
-    |-->routes<br>
-    |-->utils<br>
-  |--> data<br>
-  |--> Frontend<br>
-    |-->public<br>
-      |-->css<br>
-      |-->images<br>
-      |-->icones<br>
-    |-->views<br>
-      |-->ajuda<br>
-      |-->cadastro<br>
-      |-->detalhesOportunidades<br>
-      |-->funcionarios<br>
-      |-->index<br>
-      |-->login<br>
-      |-->perfil<br>
-      |-->pesquisa<br>
-      |-->projetos<br>
+&nbsp;  |--> backend<br>
+&nbsp;&nbsp;    |-->routes<br>
+&nbsp;&nbsp;    |-->utils<br>
+&nbsp;  |--> data<br>
+&nbsp;  |--> Frontend<br>
+&nbsp;&nbsp;    |-->public<br>
+ &nbsp;&nbsp;&nbsp;     |-->css<br>
+  &nbsp;&nbsp;&nbsp;    |-->images<br>
+   &nbsp;&nbsp;&nbsp;   |-->icones<br>
+ &nbsp;&nbsp;   |-->views<br>
+  &nbsp;&nbsp;&nbsp;    |-->ajuda<br>
+ &nbsp;&nbsp;&nbsp;     |-->cadastro<br>
+   &nbsp;&nbsp;&nbsp;   |-->detalhesOportunidades<br>
+  &nbsp;&nbsp;&nbsp;    |-->funcionarios<br>
+  &nbsp;&nbsp;&nbsp;    |-->index<br>
+  &nbsp;&nbsp;&nbsp;    |-->login<br>
+ &nbsp;&nbsp;&nbsp;     |-->perfil<br>
+ &nbsp;&nbsp;&nbsp;     |-->pesquisa<br>
+  &nbsp;&nbsp;&nbsp;    |-->projetos<br>
   | readme.md<br>
   | license.txt
 
