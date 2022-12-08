@@ -24,12 +24,27 @@ Nesse sentido, a navegação pela plataforma será feita via web, por meio de na
 ## 📁 Estrutura de pastas
 
 |--> documentos<br>
-  &emsp;| --> outros <br>
-  &emsp;| T06_G06_V3_Web_application_document.pdf<br>
 |--> imagens<br>
 |--> src<br>
-  &emsp;|--> Backend<br>
+  &emsp;|--> backend<br>
+  &emsp;&emsp|-->routes<br>
+  &emsp;&emsp|-->utils<br>
+  &emsp;|--> data<br>
   &emsp;|--> Frontend<br>
+  &emsp;&emsp|-->public<br>
+  &emsp;&emsp;&emsp|-->css<br>
+  &emsp;&emsp;&emsp|-->images<br>
+  &emsp;&emsp;&emsp;&emsp|-->icones<br>
+  &emsp;&emsp|-->views<br>
+  &emsp;&emsp;&emsp|-->ajuda<br>
+  &emsp;&emsp;&emsp|-->cadastro<br>
+  &emsp;&emsp;&emsp|-->detalhesOportunidades<br>
+  &emsp;&emsp;&emsp|-->funcionarios<br>
+  &emsp;&emsp;&emsp|-->index<br>
+  &emsp;&emsp;&emsp|-->login<br>
+  &emsp;&emsp;&emsp|-->perfil<br>
+  &emsp;&emsp;&emsp|-->pesquisa<br>
+  &emsp;&emsp;&emsp|-->projetos<br>
 | readme.md<br>
 | license.txt
 
