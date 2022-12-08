@@ -24,29 +24,28 @@ Nesse sentido, a navegação pela plataforma será feita via web, por meio de na
 ## 📁 Estrutura de pastas
 
 |--> documentos<br>
-|--> imagens<br>
 |--> src<br>
-  &emsp;|--> backend<br>
-  &emsp;&emsp|-->routes<br>
-  &emsp;&emsp|-->utils<br>
-  &emsp;|--> data<br>
-  &emsp;|--> Frontend<br>
-  &emsp;&emsp|-->public<br>
-  &emsp;&emsp;&emsp|-->css<br>
-  &emsp;&emsp;&emsp|-->images<br>
-  &emsp;&emsp;&emsp;&emsp|-->icones<br>
-  &emsp;&emsp|-->views<br>
-  &emsp;&emsp;&emsp|-->ajuda<br>
-  &emsp;&emsp;&emsp|-->cadastro<br>
-  &emsp;&emsp;&emsp|-->detalhesOportunidades<br>
-  &emsp;&emsp;&emsp|-->funcionarios<br>
-  &emsp;&emsp;&emsp|-->index<br>
-  &emsp;&emsp;&emsp|-->login<br>
-  &emsp;&emsp;&emsp|-->perfil<br>
-  &emsp;&emsp;&emsp|-->pesquisa<br>
-  &emsp;&emsp;&emsp|-->projetos<br>
-| readme.md<br>
-| license.txt
+  |--> backend<br>
+    |-->routes<br>
+    |-->utils<br>
+  |--> data<br>
+  |--> Frontend<br>
+    |-->public<br>
+      |-->css<br>
+      |-->images<br>
+      |-->icones<br>
+    |-->views<br>
+      |-->ajuda<br>
+      |-->cadastro<br>
+      |-->detalhesOportunidades<br>
+      |-->funcionarios<br>
+      |-->index<br>
+      |-->login<br>
+      |-->perfil<br>
+      |-->pesquisa<br>
+      |-->projetos<br>
+  | readme.md<br>
+  | license.txt
 
 Dentre os arquivos presentes na raiz do projeto, definem-se:
 
