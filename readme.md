@@ -24,14 +24,28 @@ Nesse sentido, a navegação pela plataforma será feita via web, por meio de na
 ## 📁 Estrutura de pastas
 
 |--> documentos<br>
-  &emsp;| --> outros <br>
-  &emsp;| T06_G06_V3_Web_application_document.pdf<br>
-|--> imagens<br>
 |--> src<br>
-  &emsp;|--> Backend<br>
-  &emsp;|--> Frontend<br>
-| readme.md<br>
-| license.txt
+&nbsp;  |--> backend<br>
+&nbsp;&nbsp;    |-->routes<br>
+&nbsp;&nbsp;    |-->utils<br>
+&nbsp;  |--> data<br>
+&nbsp;  |--> Frontend<br>
+&nbsp;&nbsp;    |-->public<br>
+ &nbsp;&nbsp;&nbsp;     |-->css<br>
+  &nbsp;&nbsp;&nbsp;    |-->images<br>
+   &nbsp;&nbsp;&nbsp;   |-->icones<br>
+ &nbsp;&nbsp;   |-->views<br>
+  &nbsp;&nbsp;&nbsp;    |-->ajuda<br>
+ &nbsp;&nbsp;&nbsp;     |-->cadastro<br>
+   &nbsp;&nbsp;&nbsp;   |-->detalhesOportunidades<br>
+  &nbsp;&nbsp;&nbsp;    |-->funcionarios<br>
+  &nbsp;&nbsp;&nbsp;    |-->index<br>
+  &nbsp;&nbsp;&nbsp;    |-->login<br>
+ &nbsp;&nbsp;&nbsp;     |-->perfil<br>
+ &nbsp;&nbsp;&nbsp;     |-->pesquisa<br>
+  &nbsp;&nbsp;&nbsp;    |-->projetos<br>
+  | readme.md<br>
+  | license.txt
 
 Dentre os arquivos presentes na raiz do projeto, definem-se:
 
