@@ -1,15 +1,14 @@
 const express = require("express");
 const db = require('../utils/db');
-
 const router = express.Router();
-const app = express
+const app = express()
 
-app.request(express.json())
+
 
 app.use(express.urlencoded())
 // rota principal de cadastro
 router.all("/", (req, res) => {
-	res.render("funcionarios/index");
+	res.render("cadastro/index");
 });
 
 // rota principal para retornar os dados do cadastro
@@ -155,3 +154,13 @@ app.post('/cadastro2Post',(req,res)=>{
 		}
 	  });
 })
+
+
+app.post('/cadastrp2Post', (req,res)=>{
+	const cpf = req.body.cpf
+	const nome = req.body.nome
+	const departamento = req.body.departamento
+
+	db.run(`INSERT INTO funcionarios_empreiteiras (nome,cpf, departamento) VALUES(?,?)`),[nome, cpf,departamento ]
+	db.run(`INSERT INTO `)
+})	
