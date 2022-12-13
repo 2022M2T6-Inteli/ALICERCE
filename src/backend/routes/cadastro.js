@@ -162,5 +162,8 @@ app.post('/cadastrp2Post', (req,res)=>{
 	const departamento = req.body.departamento
 
 	db.run(`INSERT INTO funcionarios_empreiteiras (nome,cpf, departamento) VALUES(?,?)`),[nome, cpf,departamento ]
-	db.run(`INSERT INTO `)
-})	
+	
+})
+
+
+ 
