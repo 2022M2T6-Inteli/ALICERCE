@@ -54,6 +54,7 @@ app.use("/cadastro", require("./routes/cadastro"));
 app.use("/perfil", require("./routes/perfil"));
 app.use("/pesquisa", require("./routes/pesquisa"));
 
+
 // Configura o middleware de erro. Ele deve ser o último middleware configurado.
 app.use((req, res, next) => {
 	// Tratador de erro 404.
