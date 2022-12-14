@@ -318,3 +318,10 @@
 .ver_mais{
   background-color: red;
 }
+
+
+.iconeCadastroInicial {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
