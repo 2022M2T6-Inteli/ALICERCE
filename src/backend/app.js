@@ -29,9 +29,9 @@ app.use("/public", express.static(path.join(__dirname, "../frontend/public"), {
 
 app.use("/views", express.static(path.join(__dirname, "../frontend/views")));
 
-// Configura o middleware que lê cookies. Ele está aqui, abaixo do middleware de arquivos estáticos, porque não precisamos de cookies para servir arquivos estáticos.
-const cookieParser = require("cookie-parser");
-app.use(cookieParser());
+// // Configura o middleware que lê cookies. Ele está aqui, abaixo do middleware de arquivos estáticos, porque não precisamos de cookies para servir arquivos estáticos.
+// const cookieParser = require("cookie-parser");
+// app.use(cookieParser());
 
 // Configura os middlewares responsáveis por fazer o parse do conteúdo do body quando ele for um JSON, ou um form convencional.
 app.use(express.json());

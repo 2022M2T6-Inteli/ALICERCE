@@ -8,10 +8,10 @@ const app = express()
 app.use(express.urlencoded())
 // rota principal de cadastro
 router.all("/", (req, res) => {
-	res.render("cadastro/index");
+	res.render("cadastro/cadastro");
 });
-
 // rota principal para retornar os dados do cadastro
+
 router.get("/alterar", (req, res) => {
 	let id = req.query["id"];
 
