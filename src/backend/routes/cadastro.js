@@ -1,7 +1,13 @@
 const express = require("express");
-const db = require('../utils/db');
+const db = require('data_alicerce.db');
 const router = express.Router();
 const app = express()
+
+
+
+app.use(express.json())
+
+
 
 
 
@@ -122,7 +128,7 @@ router.all("/inserir", (req, res) => {
 module.exports = router;
 
 
-app.get('/cadastro1', (req, res)=>{
+router.get('/cadastro2', (req, res)=>{
 
 	res.sendFile(__dirname + 'src/frontend/views/cadastro/index.ejs')
 
@@ -156,7 +162,7 @@ app.post('/cadastro2Post',(req,res)=>{
 })
 
 
-app.post('/cadastrp2Post', (req,res)=>{
+app.post('/cadastro2Post', (req,res)=>{
 	const cpf = req.body.cpf
 	const nome = req.body.nome
 	const departamento = req.body.departamento
@@ -166,5 +172,25 @@ app.post('/cadastrp2Post', (req,res)=>{
 })
 
 
+router.get("/obra",(req,res)=>{
+	res.render("cadastro/obra")
+  })
 
- 
+router.post("/inserirObra",(req,res)=>{
+    
+	
+    const titulo = req.body.titulo
+	
+    const descricao = req.body.descricao
+    const resumo = req.body.resumo
+    const data_inicio = req.body.data_inicio
+	
+	
+   let sql = `INSERT INTO oportunidades (titulo, descricao, resumo, data_inicio) values(${titulo},${descricao},${resumo},${data_inicio})`
+   console.log(sql)
+    db.run(sql)
+   if (err) {
+        res.send("Erro: " + err.message);
+        console.error(err.message);
+    }
+})
