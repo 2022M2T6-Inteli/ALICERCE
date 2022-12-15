@@ -1,5 +1,5 @@
 const express = require("express");
-const db = require('data_alicerce.db');
+const db = require("../utils/db");
 const router = express.Router();
 const app = express()
 
@@ -180,17 +180,23 @@ router.post("/inserirObra",(req,res)=>{
     
 	
     const titulo = req.body.titulo
-	
     const descricao = req.body.descricao
     const resumo = req.body.resumo
     const data_inicio = req.body.data_inicio
 	
 	
-   let sql = `INSERT INTO oportunidades (titulo, descricao, resumo, data_inicio) values(${titulo},${descricao},${resumo},${data_inicio})`
-   console.log(sql)
-    db.run(sql)
-   if (err) {
-        res.send("Erro: " + err.message);
-        console.error(err.message);
+   
+   console.log(req.body)
+   console.log(req.body.titulo)
+   console.log(req.body.descricao)
+   console.log(req.body.resumo)
+   console.log(req.body.data_inicio)
+
+
+
+	db.run( `INSERT INTO oportunidades (descricao, resumo, data_inicio) values(?,?,?)`[descricao,resumo,data_inicio])
+    if (err) {
+         res.send("Erro: " + err.message);
+         console.error(err.message);
     }
 })
