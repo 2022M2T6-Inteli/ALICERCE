@@ -1,0 +1,72 @@
+<%- include("../cabecalho") %>
+
+
+    <div class="container-fluid container-fluid-cadastro">
+        <!-- home > cadastro  -->
+
+        <div class="container areaCadastro">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center teste">Cadastro</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 iconeCadastroInicial">
+                    <img src="../../public/images/cadastro-2.svg" alt="">
+                </div>
+                <div class="row cadastro">
+                    <div class="col-12 informacoesContato">
+                        <h2>Informações para contato</h2>
+                    </div>
+
+                    <form class="formCadastro" action="/continuacaoCadastro">
+                        <div class="containerCadastro">
+
+                            <div class="col-12 grupoLabel">
+                                <label class="form-label" for="cpf">CPF do responsável</label>
+                                <input class="form-control" type="text" name="cpf" placeholder="Ex: 38.386.974/0001-28">
+                            </div>
+                            <div class="col-12 grupoLabel">
+                                <label class="form-label" for="nome">Nome do responsável</label>
+                                <input class="form-control" type="text" name="nome"
+                                    placeholder="Ex: empresa-empreiteira@gmail.com">
+                            </div>
+                            <div class="col-12 grupoLabel grupoRadio">
+                                <label class="form-label" for="genero">Gênero</label>
+                                <div class="inputRadio">
+                                    <input type="radio" name="genero" value="masculino" /> masculino
+                                    <input type="radio" name="genero" value="feminino" /> feminino
+                                    <input type="radio" name="genero" value="outro" /> outro
+                                </div>
+                            </div>
+
+                            <div class="col-12 grupoLabel">
+                                <label class="form-label" for="departamento">Departamento</label>
+                                <input class="form-control" type="text" name="departamento"
+                                    placeholder="Digite a sua senha aqui">
+                            </div>
+
+                            <div class="col-12 grupoLabel">
+                                <label class="form-label" for="funcao">Função</label>
+                                <input class="form-control" type="text" name="funcao"
+                                    placeholder="Digite novamente a sua senha">
+                            </div>
+
+                            <div class="containerBotaoCadastro"> <input type="button"
+                                    class="btn btn-warning botaoAcessar botaoCadastro" value="CONTINUAR">
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+    </body>
+
+    </html>
