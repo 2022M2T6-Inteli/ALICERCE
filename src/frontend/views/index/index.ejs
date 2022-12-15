@@ -3,25 +3,24 @@
 
 <div class="container-fluid containerPesquisa">
 
-	<form action="">
+	<form action="/pesquisa" method="post">
 		<div class="form-group formAgrupamento" align="center">
 
 			<div class="row gridAgrupamentoHome">
 				<div class="col-sm-12 col-md-6 col-lg-5 mt-4">
 					<label for="especialidadeInput" class="inputForm">Que especialidade você procura?</label>
-					<input type="text" class="form-control mt-1" id="especialidadeInput"
+					<input type="text" class="form-control mt-1" name="especialidadeInput" id="especialidadeInput" value=""
 						placeholder="Pesquisa por especialidade">
 				</div>
 
 				<div class="col-sm-12 col-md-6 col-lg-5 mt-4">
 					<label for="localidadeInput" class="inputForm">Em qual estado você procura?</label>
-					<input type="text" class="form-control mt-1" id="especialidadeInput"
+					<input type="text" class="form-control mt-1" name="localidadeInput"  id="localidadeInput"  value=""
 						placeholder="Pesquisa por localidade">
 				</div>
 
 			</div>
-			<a href="/pesquisa/"><button type="button" class="btn btn-dark botaoPesquisar centered" >PROCURAR OPORTUNIDADES</button></a>
-			
+				<input type="submit" class="btn btn-dark botaoPesquisar centered" value="PROCURAR OPORTUNIDADES">
 
 		</div>
 	</form>

@@ -5,6 +5,26 @@ const router = express.Router();
 
 // rota principal para detalhes da oportunidade
 router.all("/", (req, res) => {
+	res.statusCode = 200;
+	res.setHeader('Access-Control-Allow-Origin', '*'); 
+	console.log(Object.keys(req.query).length)
+    let sql
+    if (Object.keys(req.query).length == 0) { 
+        sql = "SELECT *, op.id_oportunidade, op.nome_oportunidade, op.id_endereco, op.image, op.titulo, op.resumo, op.id_especialidade, op.id_obra, op.data_inicio, op.data_fim, en.cidade, ob.nome_obra FROM oportunidades op LEFT JOIN obras ob ON op.id_obra = ob.id_obra LEFT JOIN especialidades es ON op.id_especialidade = es.id_especialidade LEFT JOIN enderecos en ON op.id_endereco = en.id_endereco"; 
+		
+		// empreiteiras_certificados B ON A.id_empreiteira = B.id_empreiteira";
+    } 
+	// else if (){
+    //     sql = "SELECT * FROM empreiteiras A LEFT JOIN empreiteiras_certificados B ON A.id_empreiteira = B.id_empreiteira WHERE A.id_empreiteira = " + req.query.id;
+    // }
+
+	db.get(sql, [id], (err, row) => {
+		if (err) {
+			console.error(err.message);
+			res.send("Erro: " + err.message);
+			return;
+		}});
+
 	res.render("detalhesOportunidades/index");
 });
 

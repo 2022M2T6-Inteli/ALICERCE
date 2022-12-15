@@ -1,5 +1,4 @@
 const express = require("express");
-const db = require('data_alicerce.db');
 const router = express.Router();
 const app = express()
 
@@ -16,6 +15,15 @@ app.use(express.urlencoded())
 router.all("/", (req, res) => {
 	res.render("cadastro/cadastro");
 });
+
+router.all("/continuacao", (req, res) => {
+	res.render("cadastro/continuacao");
+});
+
+router.all("/completar", (req, res) => {
+	res.render("cadastro/completar");
+});
+
 // rota principal para retornar os dados do cadastro
 
 router.get("/alterar", (req, res) => {

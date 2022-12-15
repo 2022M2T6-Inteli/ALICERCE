@@ -324,4 +324,64 @@
   display: flex;
   /* align-items: center; */
   justify-content: center;
+
 }
+.iconeCadastroInicial > img {
+  width: 300px;
+  height: 150px;
+}
+
+.areaCadastro{
+  background-color: white;
+}
+.teste {
+  color: red;
+}
+
+.text-center {
+  margin-top: 48px;
+}
+.cadastro{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.grupoLabel{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+  justify-content: center;
+}
+
+.form-control {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.botaoCadastro{
+  display: flex;
+  justify-content: center;
+  margin: 0
+}
+.containerBotaoCadastro{
+  display: flex;
+  justify-content: center;
+}
+
+.formCadastro {
+  width: 60%;
+  margin-bottom: 32px;
+  /* margin-top: 32px; */
+}
+
+.container-fluid-cadastro {
+  padding-bottom:48px;
+  padding-top: 32px;
+  
+}
+
+.informacoesContato{
+  margin: 0 0 32px 0;
+  text-align: center;
+}
+
