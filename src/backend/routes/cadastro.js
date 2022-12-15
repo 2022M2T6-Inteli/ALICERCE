@@ -1,4 +1,5 @@
 const express = require("express");
+const db = require("../utils/db");
 const router = express.Router();
 const app = express()
 
@@ -191,20 +192,16 @@ router.post("/inserirObra",(req,res)=>{
     const descricao = req.body.descricao
     const resumo = req.body.resumo
     const data_inicio = req.body.data_inicio
+	const especialidade = req.body.especialidade
+	const nome_oportunidade = req.body.nome_oportunidade
+	const endereco = req.body.endereco	
+	const qtde = req.body.quantidade_pessoas_desejadas
+	const id_obra = req.body.obra
+
+
+
+	let sql = `INSERT INTO oportunidades (id_especialidade, nome_oportunidade,id_endereco,image,titulo, descricao, resumo, data_inicio,quantidade_pessoas_desejadas,id_obra) values("${especialidade}","${nome_oportunidade}","${endereco}","imagem_teste","${titulo}","${descricao}","${resumo}","${data_inicio}","${qtde}","${id_obra}")`
+    console.log(sql)
+	db.run(sql)
 	
-	
-   
-   console.log(req.body)
-   console.log(req.body.titulo)
-   console.log(req.body.descricao)
-   console.log(req.body.resumo)
-   console.log(req.body.data_inicio)
-
-
-
-	db.run( `INSERT INTO oportunidades (descricao, resumo, data_inicio) values(?,?,?)`[descricao,resumo,data_inicio])
-    if (err) {
-         res.send("Erro: " + err.message);
-         console.error(err.message);
-    }
 })
