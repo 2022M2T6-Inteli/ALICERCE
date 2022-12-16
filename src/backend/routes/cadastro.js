@@ -144,40 +144,39 @@ router.get('/cadastro2', (req, res)=>{
 })
 
 //adicionando dados do cadastro 1
-app.post('/cadastro1Post',(req,res)=>{
+router.post('/cadastro1Post',(req,res)=>{
 	
 	const cnpj = req.body.cnpj
 	const email = req.body.email
 	const telefone = req.body.telefone
+	const senha = req.body.senha
+	console.log(req.body)
 
-	db.run('INSERT INTO empreiteiras (CNPJ, email , telefone) VALUES (?, ?, ?)', [cnpj, email, telefone], function(err) {
-		if (err) {
-		  return console.error(err.message);
-		}
-	  });
+	let sql = `INSERT INTO empreiteiras (CNPJ, email , telefone) VALUES ("${cnpj}","${email}","${telefone}")`
+	console.log(sql)
+	//db.run(sql)
 })
 
-app.post('/cadastro2Post',(req,res)=>{
-	
-	const cnpj = req.body.cnpj
-	const email = req.body.email
-	const telefone = req.body.telefone
+router.post('/completarCadastro',(req,res)=>{
+	const trabalhouComMrv = req.body.trabalhouComMrv
+	const razao_social = req.body.razaoSocial
+	const nome_fantasia = req.body.nomeFantasia
+	const cep = req.body.cep
+	const rua = req.body.rua
+	const numero = req.body.numero
+	console.log(req.body)
 
-	db.run('INSERT INTO empreiteiras (CNPJ, email , telefone) VALUES (?, ?, ?)', [cnpj, email, telefone], function(err) {
-		if (err) {
-		  return console.error(err.message);
-		}
-	  });
 })
 
 
-app.post('/cadastro2Post', (req,res)=>{
+router.post("/continuacaoCadastro",(req,res)=>{
 	const cpf = req.body.cpf
 	const nome = req.body.nome
+	const genero = req.body.genero
 	const departamento = req.body.departamento
-
-	db.run(`INSERT INTO funcionarios_empreiteiras (nome,cpf, departamento) VALUES(?,?)`),[nome, cpf,departamento ]
+	const funcao = req.body.funcao
 	
+	console.log(req.body)
 })
 
 
