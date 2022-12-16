@@ -33,3 +33,75 @@
     </form>
   </body>
 </html>
+
+
+
+
+
+<%- include("../cabecalho") %>
+
+
+    <div class="container-fluid container-fluid-cadastro">
+        <!-- home > cadastro  -->
+
+        <div class="container areaCadastro">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center teste">Inserir obra</h1>
+                </div>
+            </div>
+            <div class="row">
+               \
+            <div class="row cadastro">
+            <form class="formCadastro" action="/cadastro/cadastro1Post" method="post">
+                    <div class="containerCadastro">
+                
+                <div class="col-12 grupoLabel">
+                    <label class="form-label" for="cnpj">Especialidade:</label>
+                    <input class="form-control" type="text" name="especialidade" > 
+                </div>
+                <div class="col-12 grupoLabel">
+                    <label class="form-label" for="email">Nome oportunidade:</label>
+                    <input class="form-control" type="text" name="nome_oportunidade" > 
+                </div>
+                <div class="col-12 grupoLabel">
+                    <label class="form-label" for="telefone">Endereço:</label>
+                    <input class="form-control" type="text" name="telefone" > 
+                </div>
+
+                <div class="col-12 grupoLabel">
+                    <label class="form-label" for="titulo" >Titulo da obra</label>
+                    <input class="form-control" type="password" name="titulo" > 
+                </div>
+
+                <div class="col-12 grupoLabel">
+                  <label class="form-label" for="descricao" >descricao</label>
+                  <input class="form-control" type="text" name="descricao"> 
+              </div>
+
+              <div class="col-12 grupoLabel">
+                <label class="form-label" for="descricao" >resumo</label>
+                <input class="form-control" type="text" name="resumo" > 
+            </div>
+
+            <div class="col-12 grupoLabel">
+              <label class="form-label" for="descricao" >Quantidade de pessoas desejadas</label>
+              <input class="form-control" type="text" name="quantidade_pessoas_desejadas" > 
+          </div>
+                <!-- <input class="botaoAcessar" type="submit" value="CONTINUAR"> -->
+                <div class="containerBotaoCadastro">                <input type="submit" class="btn btn-warning botaoAcessar botaoCadastro" value="CONTINUAR"> 
+                </div>
+            </div>
+            </form>
+            
+            </div>
+
+                
+        </div>
+    </div>
+
+
+    </div>
+    
+</body>
+</html>
