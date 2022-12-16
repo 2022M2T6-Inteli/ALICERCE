@@ -179,7 +179,6 @@ router.post("/continuacaoCadastro",(req,res)=>{
 	const funcao = req.body.funcao
 	
 	console.log(req.body)
-	res.send("Cadastrado!")
 	
 	
 	res.redirect("/")
@@ -207,7 +206,9 @@ router.post("/inserirObra",(req,res)=>{
 
 
 	let sql = `INSERT INTO oportunidades (id_especialidade, nome_oportunidade,id_endereco,image,titulo, descricao, resumo, data_inicio,quantidade_pessoas_desejadas,id_obra) values("${especialidade}","${nome_oportunidade}","${endereco}","imagem_teste","${titulo}","${descricao}","${resumo}","${data_inicio}","${qtde}","${id_obra}")`
-    console.log(sql)
 	db.run(sql)
+    console.log(sql)
 	
+	
+	res.redirect("/")
 })
