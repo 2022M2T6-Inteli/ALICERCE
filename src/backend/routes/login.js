@@ -5,7 +5,7 @@ const router = express.Router();
 
 // rota principal para acessar a pagina de login
 router.all("/", (req, res) => {
-	res.render("funcionarios/index");
+	res.render("login/index");
 });
 
 // rota para logar

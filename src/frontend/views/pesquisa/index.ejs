@@ -2,7 +2,7 @@
 
 <nav class="containerLocalizacao">
   <img src="../../public/images/homepage-icon.svg" alt="" />
-  <a href="#">Home</a>
+  <a href="/">Home</a>
   <p id="separadorLocalizacao">></p>
   <a href="#" class="paginaAtual">Página de busca</a>
 </nav>
@@ -62,19 +62,17 @@
   >
     Filtro
   </button>
+  <div class="container-fluid backgroundGreen containerPesquisaBotao">
 
-  <div class="botaoPesquisar">
-    <button type="button" class="btn btn-dark botaoPesquisar centered">
-      PESQUISAR
-    </button>
-  </div>
+    <button type="submit" class="btn btn-dark botaoPesquisar centered pesquisarFiltro" onclick="pesquisaFiltro()">PESQUISAR</button>
+</div>
 </div>
 
 <div class="container-fluid">
   <div class="informacoesOportunidades">
     <div class="quantidadeOportunidades">
-      <p>230 oportunidades</p>
-      <p>Total de oportunidades: 300</p>
+      <!-- <p> oportunidades</p> -->
+      <p>Total de oportunidades: <%-total[0].qtd_total%></p>
     </div>
     <div class="ordenacaoOportunidades">
       <a href="">Mais relevantes</a>
@@ -134,3 +132,27 @@
 </div>
 
 <%- include("../rodape") %>
+
+<script>
+  function pesquisaFiltro() {
+    let filtroEspecialidade = document.getElementById("filtroEspecialidade").value;
+    let filtroTempoContratacao = document.getElementById("filtroTempoContratacao").value;
+    let filtroEstado = document.getElementById("filtroEstado").value;
+    let filtroCidade = document.getElementById("filtroCidade").value;
+    let url = `/pesquisa?filtro=especialidade&especialidade=${filtroEspecialidade}&cidade=${filtroCidade}`;
+    // console.log(filtroEspecialidade, filtroTempoContratacao, filtroEstado, filtroCidade)
+
+      fetch(url)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        let usuarios = data;
+        console.log(usuarios)
+        });
+        // document.getElementById('resultado').innerHTML = saida;
+      }
+
+
+
+</script>

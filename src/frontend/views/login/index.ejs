@@ -1,30 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head> 
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- linkando com o bootstrap -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <!-- linkando o css -->
-    <link rel="stylesheet" href="login.css" />
-    <title>Página de login</title>
-  </head>
-  <body>
-  <!-- criando o formulario para login -->
-    <a href="../detalhesOportunidade/detalhes_oportunidade.html"
-      >detalhes_oportunidade</a
-    >
-    <a href="../paginaDeBusca/paginadebusca.html">pagina de busca</a>
-    <div class="container py-5 h-100">
+<%- include("../cabecalho") %>
+
+<nav class="containerLocalizacao">
+  <img src="../../public/images/homepage-icon.svg" alt="" />
+  <a href="/">Home</a>
+  <p id="separadorLocalizacao">></p>
+  <a href="#" class="paginaAtual">Login</a>
+</nav>
+
+    <div class="container py-5 h-100" id="loginArea">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-          <div class="card text">
+          <div class="card text"  >
             <div class="card-body p-5 text-center">
               <div class="mb-md-5 mt-md-4 pb-5">
                 <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
@@ -57,7 +43,7 @@
                 </div>
 
                 <button
-                  class="btn btn-outline-primary btn-lg px-5"
+                  class="btn btn-outline-primary btn-lg px-5 botaoLogin"
                   type="submit"
                 >
                   ENTRAR
@@ -67,7 +53,7 @@
               <div>
                 <p class="mb-0 cadastroArea">
                   Não tem cadastro?
-                  <a href="#!" class="text-secondary fw-bold"
+                  <a href="/cadastro" class="text-secondary fw-bold"
                     >Cadastre-se aqui</a
                   >
                 </p>
@@ -79,20 +65,4 @@
     </div>
     <a href="../home/PaginaInicial.html">teste</a>
 
-    <!-- criando o footer -->
-    <div class="footer">
-      <div class="logo">
-        <img src="../images/logo_transparente.svg" alt="Logo da MRV" />
-      </div>
-      <div class="options">
-        <p id="loginFooter">LOGIN</p>
-        <p id="ouFooter">OU</p>
-        <p id="cadastroFooter">CADASTRE-SE</p>
-      </div>
-      <div class="search">
-        <img src="../images/lupa.svg" alt="Lupa de pesquisa" />
-      </div>
-      <div class="menu"><img src="../images/menu.svg" alt="Menu" /></div>
-    </div>
-  </body>
-</html>
+    <%- include("../rodape") %>

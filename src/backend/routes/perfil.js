@@ -5,8 +5,28 @@ const router = express.Router();
 
 // rota principal para acessar a pagina de perfil
 router.all("/", (req, res) => {
-	res.render("funcionarios/index");
+
+	res.statusCode = 200;
+	res.setHeader('Access-Control-Allow-Origin', '*'); 
+
+	let id_oportunidade = req.query.id_oportunidade
+	let sql
+    if (Object.keys(req.query).length > 0) { 
+        sql = `SELECT *, op.id_oportunidade, op.nome_oportunidade, op.id_endereco, op.image, op.titulo, op.resumo, op.id_especialidade, op.id_obra, op.data_inicio, op.data_fim, en.cidade, ob.nome_obra, es.nome_especialidade FROM oportunidades op LEFT JOIN obras ob ON op.id_obra = ob.id_obra LEFT JOIN especialidades es ON op.id_especialidade = es.id_especialidade LEFT JOIN enderecos en ON op.id_endereco = en.id_endereco;`; 
+	} 
+
+	// db.get(sql, [id_oportunidade], (err, row) => {
+	// 	if (err) {
+	// 		console.error(err.message);
+	// 		res.send("Erro: " + err.message);
+	// 		return;
+	// 	}
+		
+	// });
+
+	res.render("perfil/index");
 });
+	
 
 // rota para obter informaçoes do usuario na pagina de perfil
 router.get("/alterar", (req, res) => {
