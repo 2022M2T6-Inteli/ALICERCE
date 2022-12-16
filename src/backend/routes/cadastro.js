@@ -153,6 +153,7 @@ router.post('/cadastro1Post',(req,res)=>{
 	console.log(req.body)
 
 	let sql = `INSERT INTO empreiteiras (CNPJ, email , telefone) VALUES ("${cnpj}","${email}","${telefone}")`
+	res.redirect("/cadastro/completar")
 	console.log(sql)
 	//db.run(sql)
 })
@@ -165,6 +166,7 @@ router.post('/completarCadastro',(req,res)=>{
 	const rua = req.body.rua
 	const numero = req.body.numero
 	console.log(req.body)
+	res.redirect("/cadastro/continuacao")
 
 })
 
@@ -177,6 +179,11 @@ router.post("/continuacaoCadastro",(req,res)=>{
 	const funcao = req.body.funcao
 	
 	console.log(req.body)
+	res.send("Cadastrado!")
+	
+	
+	res.redirect("/")
+	
 })
 
 
