@@ -19,18 +19,18 @@ DROP TABLE IF EXISTS `contratos`;
 CREATE TABLE
 IF NOT EXISTS "enderecos"
 (
-    "id_endereco" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    "id_endereco" INTEGER PRIMARY KEY AUTOINCREMENT,
     "cep" VARCHAR
-(8) NOT NULL,
+(8),
     "logradouro" VARCHAR
-(100) NOT NULL,
+(100),
     "bairro" VARCHAR
-(50) NOT NULL,
+(50),
     "cidade" VARCHAR
-(50) NOT NULL,
+(50),
     "estado" VARCHAR
-(2) NOT NULL,
-    "numero" INTEGER NOT NULL,
+(2),
+    "numero" INTEGER,
     "complemento" VARCHAR
 (50)
 );
@@ -38,25 +38,25 @@ IF NOT EXISTS "enderecos"
 CREATE TABLE
 IF NOT EXISTS "especialidades"
 (
-    "id_especialidade" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    "id_especialidade" INTEGER PRIMARY KEY AUTOINCREMENT,
     "nome_especialidade" VARCHAR
-(50) NOT NULL,
+(50),
     "imagem" VARCHAR
-(50) NOT NULL
+(50)
 );
 
 CREATE TABLE
 IF NOT EXISTS "certificados"
 (
-    "id_certificado" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    "id_certificado" INTEGER PRIMARY KEY AUTOINCREMENT,
     "nome_certificado" VARCHAR
-(50) NOT NULL
+(50)
 );
 
 CREATE TABLE
 IF NOT EXISTS "empreiteiras"
 (
-	"id_empreiteira" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"id_empreiteira" INTEGER PRIMARY KEY AUTOINCREMENT,
     "CNPJ" VARCHAR
 (14) ,
     "razao_social" VARCHAR
@@ -81,10 +81,10 @@ IF NOT EXISTS "empreiteiras"
 CREATE TABLE
 IF NOT EXISTS "obras"
 (
-    "id_obra" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    "id_obra" INTEGER PRIMARY KEY AUTOINCREMENT,
     "nome_obra" VARCHAR
-(50) NOT NULL,
-    "id_endereco" INTEGER NOT NULL,
+(50),
+    "id_endereco" INTEGER,
     "image" VARCHAR
 (250),
     FOREIGN KEY
@@ -95,10 +95,10 @@ IF NOT EXISTS "obras"
 CREATE TABLE
 IF NOT EXISTS "funcionarios_empreiteiras"
 (
-    "id_funcionario" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    "id_empreiteira" INTEGER NOT NULL,
-    "nome_funcionario" INTEGER NOT NULL,
-    "responsavel" BOOLEAN NOT NULL,
+    "id_funcionario" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "id_empreiteira" INTEGER,
+    "nome_funcionario" INTEGER,
+    "responsavel" BOOLEAN,
     "sexo" VARCHAR
 (1),
     "cpf" VARCHAR
@@ -125,9 +125,9 @@ IF NOT EXISTS "funcionarios_empreiteiras"
 CREATE TABLE
 IF NOT EXISTS "empreiteiras_certificados"
 (
-    "id_empreiteira_certificado" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    "id_empreiteira" INTEGER NOT NULL,
-    "id_certificado" INTEGER NOT NULL,
+    "id_empreiteira_certificado" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "id_empreiteira" INTEGER,
+    "id_certificado" INTEGER,
     FOREIGN KEY
 (id_empreiteira) REFERENCES empreiteiras
 (id_empreiteira),
@@ -139,36 +139,36 @@ IF NOT EXISTS "empreiteiras_certificados"
 CREATE TABLE
 IF NOT EXISTS "admin"
 (
-    "id_funcionario_mrv" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    "id_funcionario_mrv" INTEGER PRIMARY KEY AUTOINCREMENT,
     "nome" VARCHAR
-(50) NOT NULL,
+(50),
     "email" VARCHAR
-(50) NOT NULL,
+(50),
     "senha" VARCHAR
-(50) NOT NULL,
+(50),
     "regional" VARCHAR
-(50) NOT NULL,
+(50),
     "telefone" VARCHAR
-(11) NOT NULL,
+(11),
     "ultima_atualizacao" DATE
 );
 
 CREATE TABLE
 IF NOT EXISTS "oportunidades"
 (
-    "id_oportunidade" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    "id_oportunidade" INTEGER PRIMARY KEY AUTOINCREMENT,
     "nome_oportunidade" VARCHAR
-(50) NOT NULL,
-    "id_endereco" INTEGER NOT NULL,
+(50),
+    "id_endereco" INTEGER,
     "image" VARCHAR
-(250) NOT NULL,
+(250),
     "titulo" VARCHAR
-(50) NOT NULL,
-    "descricao" TEXT NOT NULL,
-    "resumo" TEXT NOT NULL,
-    "quantidade_pessoas_desejadas" INTEGER NOT NULL,
-    "id_especialidade" INTEGER NOT NULL,
-    "id_obra" INTEGER NOT NULL,
+(50),
+    "descricao" TEXT,
+    "resumo" TEXT,
+    "quantidade_pessoas_desejadas" INTEGER,
+    "id_especialidade" INTEGER,
+    "id_obra" INTEGER,
     "data_inicio" DATE,
     "data_fim" DATE,
     FOREIGN KEY
@@ -185,9 +185,9 @@ IF NOT EXISTS "oportunidades"
 CREATE TABLE
 IF NOT EXISTS "empreiteiras_especialidades"
 (
-    "id_empreiteiras_especialidades" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-	"id_empreiteira" INTEGER NOT NULL,
-    "id_especialidade" INTEGER NOT NULL,
+    "id_empreiteiras_especialidades" INTEGER PRIMARY KEY AUTOINCREMENT,
+	"id_empreiteira" INTEGER,
+    "id_especialidade" INTEGER,
     FOREIGN KEY
 (id_empreiteira) REFERENCES empreiteiras
 (id_empreiteira),
@@ -199,10 +199,10 @@ IF NOT EXISTS "empreiteiras_especialidades"
 CREATE TABLE
 IF NOT EXISTS "feedbacks"
 (
-    "id_feedback" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    "descricao_feedback" TEXT NOT NULL,
-    "id_empreiteira" INTEGER NOT NULL,
-    "id_oportunidade" INTEGER NOT NULL,
+    "id_feedback" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "descricao_feedback" TEXT,
+    "id_empreiteira" INTEGER,
+    "id_oportunidade" INTEGER,
     FOREIGN KEY
 (id_empreiteira) REFERENCES empreiteiras
 (id_empreiteira),
@@ -214,10 +214,10 @@ IF NOT EXISTS "feedbacks"
 CREATE TABLE
 IF NOT EXISTS "empreiteira_historico_obras"
 (
-    "id_historico_obra" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    "id_empreiteira" INTEGER NOT NULL,
-    "id_obra" INTEGER NOT NULL,
-    "id_oportunidade" INTEGER NOT NULL,
+    "id_historico_obra" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "id_empreiteira" INTEGER,
+    "id_obra" INTEGER,
+    "id_oportunidade" INTEGER,
     FOREIGN KEY
 (id_empreiteira) REFERENCES empreiteiras
 (id_empreiteira),
@@ -232,9 +232,9 @@ IF NOT EXISTS "empreiteira_historico_obras"
 CREATE TABLE
 IF NOT EXISTS "favoritos"
 (
-    "id_favorito" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    "id_empreiteira" INTEGER NOT NULL,
-    "id_oportunidade" INTEGER NOT NULL,
+    "id_favorito" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "id_empreiteira" INTEGER,
+    "id_oportunidade" INTEGER,
     FOREIGN KEY
 (id_empreiteira) REFERENCES empreiteiras
 (id_empreiteira),
@@ -246,16 +246,16 @@ IF NOT EXISTS "favoritos"
 CREATE TABLE
 IF NOT EXISTS "contratos"
 (
-    "id_contrato" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    "id_oportunidade" INTEGER NOT NULL,
-    "id_empreiteira" INTEGER NOT NULL,
+    "id_contrato" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "id_oportunidade" INTEGER,
+    "id_empreiteira" INTEGER,
     "contrato" VARCHAR
-(150) NOT NULL,
-    "quantidade_funcionarios" INTEGER NOT NULL,
-    "pendencias" BOOLEAN NOT NULL,
+(150),
+    "quantidade_funcionarios" INTEGER,
+    "pendencias" BOOLEAN,
     "status_contrato" VARCHAR
-(50) NOT NULL,
-    "observacoes" TEXT NOT NULL,
+(50),
+    "observacoes" TEXT,
     FOREIGN KEY
 (id_oportunidade) REFERENCES oportunidades
 (id_oportunidade),
