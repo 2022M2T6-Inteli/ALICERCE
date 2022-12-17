@@ -7,6 +7,7 @@
         src="../../public/images/pintura-imagem.jpg"
         alt="Imagem de capa do card"
       />
+      <!-- CARD DINAMICO-->
       <div class="card-text">
         <p class="card-text-label" id="cardLocal">Local:</p>
         <p class="card-text-response"><%-resultado.cidade%></p>
@@ -29,10 +30,12 @@
       </div>
 
       <div class="containerBotaoAcessar">
-        <a href="/detalhesOportunidades?id_oportunidade=<%-resultado.id_oportunidade%>"><button type="button" class="btn btn-warning botaoAcessar">
-          Acessar
-        </button></a>
-
+        <a
+          href="/detalhesOportunidades?id_oportunidade=<%-resultado.id_oportunidade%>"
+          ><button type="button" class="btn btn-warning botaoAcessar">
+            Acessar
+          </button></a
+        >
       </div>
     </div>
   </div>

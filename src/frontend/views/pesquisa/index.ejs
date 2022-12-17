@@ -1,3 +1,4 @@
+<!-- incluindo cabecalho -->
 <%- include("../cabecalho") %>
 
 <nav class="containerLocalizacao">
@@ -62,10 +63,16 @@
   >
     Filtro
   </button>
+  <!-- area de pesquisa -->
   <div class="container-fluid backgroundGreen containerPesquisaBotao">
-
-    <button type="submit" class="btn btn-dark botaoPesquisar centered pesquisarFiltro" onclick="pesquisaFiltro()">PESQUISAR</button>
-</div>
+    <button
+      type="submit"
+      class="btn btn-dark botaoPesquisar centered pesquisarFiltro"
+      onclick="pesquisaFiltro()"
+    >
+      PESQUISAR
+    </button>
+  </div>
 </div>
 
 <div class="container-fluid">
@@ -81,10 +88,8 @@
 </div>
 
 <div class="row container-fluid">
-
-  <% for(let i=0; i < response.length; i++) {let resultado = response[i]; %>
-    <%- include("../card", {resultado: resultado}); %>
-    <% }  %>
+  <% for(let i=0; i < response.length; i++) {let resultado = response[i]; %> <%-
+  include("../card", {resultado: resultado}); %> <% } %>
 
   <!-- <div class="col-sm-12 col-md-6">
     <div class="card">
@@ -127,32 +132,31 @@
       </div>
     </div>
   </div> -->
-
-
 </div>
 
 <%- include("../rodape") %>
 
 <script>
   function pesquisaFiltro() {
-    let filtroEspecialidade = document.getElementById("filtroEspecialidade").value;
-    let filtroTempoContratacao = document.getElementById("filtroTempoContratacao").value;
+    let filtroEspecialidade = document.getElementById(
+      "filtroEspecialidade"
+    ).value;
+    let filtroTempoContratacao = document.getElementById(
+      "filtroTempoContratacao"
+    ).value;
     let filtroEstado = document.getElementById("filtroEstado").value;
     let filtroCidade = document.getElementById("filtroCidade").value;
     let url = `/pesquisa?filtro=especialidade&especialidade=${filtroEspecialidade}&cidade=${filtroCidade}`;
     // console.log(filtroEspecialidade, filtroTempoContratacao, filtroEstado, filtroCidade)
 
-      fetch(url)
+    fetch(url)
       .then((response) => {
         return response.json();
       })
       .then((data) => {
         let usuarios = data;
-        console.log(usuarios)
-        });
-        // document.getElementById('resultado').innerHTML = saida;
-      }
-
-
-
+        console.log(usuarios);
+      });
+    // document.getElementById('resultado').innerHTML = saida;
+  }
 </script>
