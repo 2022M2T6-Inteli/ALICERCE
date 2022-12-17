@@ -180,6 +180,7 @@ router.post("/continuacaoCadastro",(req,res)=>{
 	
 	console.log(req.body)
 	
+	let sql = `INSERT INTO funcionarios_empreiteiras (cpf,nome_funcionario, email,departamento,cargo)`
 	
 	res.redirect("/")
 	
