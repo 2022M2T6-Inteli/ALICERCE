@@ -149,13 +149,13 @@ router.post('/cadastro1Post',(req,res)=>{
 	const cnpj = req.body.cnpj
 	const email = req.body.email
 	const telefone = req.body.telefone
-	const senha = req.body.senha
+	
 	console.log(req.body)
 
 	let sql = `INSERT INTO empreiteiras (CNPJ, email , telefone) VALUES ("${cnpj}","${email}","${telefone}")`
 	res.redirect("/cadastro/completar")
 	console.log(sql)
-	//db.run(sql)
+	db.run(sql)
 })
 
 router.post('/completarCadastro',(req,res)=>{
@@ -163,9 +163,14 @@ router.post('/completarCadastro',(req,res)=>{
 	const razao_social = req.body.razaoSocial
 	const nome_fantasia = req.body.nomeFantasia
 	const cep = req.body.cep
-	const rua = req.body.rua
 	const numero = req.body.numero
+
 	console.log(req.body)
+
+	let sql = `INSERT INTO empreiteiras (razao_social , nome_fantasia) values ("${razao_social}","${nome_fantasia}")`
+	let sql_2 = `INSERT INTO enderecos (cep, numero) values ("${cep}","${numero}")`
+	db.run(sql)
+	db.run(sql_2)
 	res.redirect("/cadastro/continuacao")
 
 })
@@ -176,12 +181,14 @@ router.post("/continuacaoCadastro",(req,res)=>{
 	const nome = req.body.nome
 	const genero = req.body.genero
 	const departamento = req.body.departamento
-	const funcao = req.body.funcao
+	const cargo = req.body.funcao
 	
 	console.log(req.body)
 	
-	let sql = `INSERT INTO funcionarios_empreiteiras (cpf,nome_funcionario, email,departamento,cargo)`
+	let sql = `INSERT INTO funcionarios_empreiteiras (cpf, nome_funcionario, sexo, departamento, cargo) values("${cpf}","${nome}","${genero}","${departamento}","${cargo}")`
 	
+	db.run(sql)
+
 	res.redirect("/")
 	
 })
