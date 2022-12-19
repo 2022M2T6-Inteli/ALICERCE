@@ -9,6 +9,7 @@ router.all("/", (req, res) => {
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
 
     let sql
+	// condicoes para ver daonde está sendo acionado a pesquisa e assim rodar o sql certo
     if (Object.keys(req.query).length == 0 && Object.keys(req.body).length == 0) { 
         sql = "SELECT *, op.id_oportunidade, op.nome_oportunidade, op.id_endereco, op.image, op.titulo, op.resumo, op.id_especialidade, op.id_obra, op.data_inicio, op.data_fim, en.cidade, ob.nome_obra, es.nome_especialidade FROM oportunidades op LEFT JOIN obras ob ON op.id_obra = ob.id_obra LEFT JOIN especialidades es ON op.id_especialidade = es.id_especialidade LEFT JOIN enderecos en ON op.id_endereco = en.id_endereco"; 
     }  else if (Object.keys(req.query).length == 0 && req.body.especialidadeInput == "" && req.body.localidadeInput == "") {
@@ -28,21 +29,21 @@ router.all("/", (req, res) => {
 		
 	let sql2 = `SELECT count(*) qtd_total FROM oportunidades`;
 
-	db.all(sql, (err, row) => {
+	db.all(sql, (err, row) => { // rodando o sql no banco de dados
 		if (err) {
 			console.error(err.message);
 			res.send("Erro: " + err.message);
 			
 			return;
 		}
-		db.all(sql2, (err, row2) => {
+		db.all(sql2, (err, row2) => { // rodando o sql no banco de dados
 			if (err) {
 				console.error(err.message);
 				res.send("Erro: " + err.message);
 				
 				return;
 			}
-			res.render("pesquisa/index", {response: row, total: row2});
+			res.render("pesquisa/index", {response: row, total: row2}); // renderizando a view e passando os dados
 		});
 	});
 
@@ -50,27 +51,4 @@ router.all("/", (req, res) => {
 	
 });
  
-router.get("/filtro", (req, res) => {
-	let id = req.query["id"];
-
-	if (!id) {
-		res.send("Id faltando");
-		return;
-	}
-
-	const sql = "SELECT id, nome, email FROM pessoa WHERE id=?";
-
-	console.log(sql);
-
-	db.get(sql, [id], (err, row) => {
-		if (err) {
-			console.error(err.message);
-			res.send("Erro: " + err.message);
-			return;
-		}
-
-		res.render("projetos/form", { funcionario: row });
-	});
-});
-
 module.exports = router;

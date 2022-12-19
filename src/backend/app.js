@@ -27,6 +27,7 @@ app.use("/public", express.static(path.join(__dirname, "../frontend/public"), {
 	maxAge: "30d"
 }));
 
+// Configura o middleware de arquivos estáticos para responder às rotas iniciadas por "/views", servindo o conteúdo da pasta "../views".
 app.use("/views", express.static(path.join(__dirname, "../frontend/views")));
 
 // // Configura o middleware que lê cookies. Ele está aqui, abaixo do middleware de arquivos estáticos, porque não precisamos de cookies para servir arquivos estáticos.
