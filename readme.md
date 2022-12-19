@@ -76,6 +76,9 @@ npm start
 6. O servidor está online.
 
 
+## 💻 GUIA DE USO
+
+Foi criado um guia de uso para a plataforma Alicerce, a fim de auxiliar futuros usuários sobre maiores funcionalidades da plataforma. Para acessar, entre no link: https://docs.google.com/document/d/1PiAk7IGiq9zQSXzsQetYuNDcWsiQAuFFTRVhB4SddJY/edit#
 
 ## 🎓 Referências
 
