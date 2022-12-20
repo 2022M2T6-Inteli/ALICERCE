@@ -24,28 +24,15 @@ Nesse sentido, a navegação pela plataforma será feita via web, por meio de na
 ## 📁 Estrutura de pastas
 
 |--> documentos<br>
+  &emsp;| --> outros <br>
+  &emsp;|T6_Web_application_document.docx<br>
+  &emsp;|T6_Web_application_document.pdf<br>
+|--> imagens<br>
 |--> src<br>
-&nbsp;  |--> backend<br>
-&nbsp;&nbsp;    |-->routes<br>
-&nbsp;&nbsp;    |-->utils<br>
-&nbsp;  |--> data<br>
-&nbsp;  |--> Frontend<br>
-&nbsp;&nbsp;    |-->public<br>
- &nbsp;&nbsp;&nbsp;     |-->css<br>
-  &nbsp;&nbsp;&nbsp;    |-->images<br>
-   &nbsp;&nbsp;&nbsp;   |-->icones<br>
- &nbsp;&nbsp;   |-->views<br>
-  &nbsp;&nbsp;&nbsp;    |-->ajuda<br>
- &nbsp;&nbsp;&nbsp;     |-->cadastro<br>
-   &nbsp;&nbsp;&nbsp;   |-->detalhesOportunidades<br>
-  &nbsp;&nbsp;&nbsp;    |-->funcionarios<br>
-  &nbsp;&nbsp;&nbsp;    |-->index<br>
-  &nbsp;&nbsp;&nbsp;    |-->login<br>
- &nbsp;&nbsp;&nbsp;     |-->perfil<br>
- &nbsp;&nbsp;&nbsp;     |-->pesquisa<br>
-  &nbsp;&nbsp;&nbsp;    |-->projetos<br>
-  | readme.md<br>
-  | license.txt
+  &emsp;|--> Backend<br>
+  &emsp;|--> Frontend<br>
+| readme.md<br>
+| license.txt
 
 Dentre os arquivos presentes na raiz do projeto, definem-se:
 
@@ -53,7 +40,9 @@ Dentre os arquivos presentes na raiz do projeto, definem-se:
 
 - <b>documentos</b>: aqui estarão todos os documentos do projeto. Há também uma pasta denominada <b>outros</b> onde estão presentes aqueles documentos complementares ao <b>web application document</b>.
 
-- <b>src</b>: nesta pasta encontra-se todo o código fonte do sistema (existem duas subpastas <b>backend</b> e <b>frontend</b> que contêm, respectivamente, o código do servidor e o código da página web e, por fim, <b>imagens</b>: imagens relacionadas ao projeto como um todo (por exemplo imagens do sistema, do grupo, logotipos e afins)..)
+- <b>imagens</b>: imagens relacionadas ao projeto como um todo (por exemplo imagens do sistema, do grupo, logotipos e afins).
+
+- <b>src</b>: nesta pasta encontra-se todo o código fonte do sistema (existem duas subpastas <b>backend</b> e <b>frontend</b> que contêm, respectivamente, o código do servidor e o código da página web).
 
 ## 💻 Configuração para desenvolvimento
 
@@ -76,9 +65,14 @@ npm start
 6. O servidor está online.
 
 
-## 💻 GUIA DE USO
+## 💻 Guia de Uso
 
 Foi criado um guia de uso para a plataforma Alicerce, a fim de auxiliar futuros usuários sobre maiores funcionalidades da plataforma. Para acessar, entre no link: https://docs.google.com/document/d/1PiAk7IGiq9zQSXzsQetYuNDcWsiQAuFFTRVhB4SddJY/edit#
+
+
+## 📋 Licença/License
+
+<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/2022M2T6-Inteli/ALICERCE">ALICERCE</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/InteliProjects">Inteli, <a href="https://www.linkedin.com/in/henrique-burle/">HENRIQUE BURLE</a>, <a href="https://www.linkedin.com/in/victorbarq/">RENAN SILVA</a>, <a href="https://www.linkedin.com/in/victorbarq/">VINICIUS KENJI</a>, <a href="https://www.linkedin.com/in/stefano-parente-652822244//">STEFANO</a>, <a href="https://www.linkedin.com/in/tonyjonas/">TONY JONAS</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
 
 ## 🎓 Referências
 
